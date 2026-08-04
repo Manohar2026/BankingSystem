@@ -13,6 +13,16 @@ public class Student {
         enrolledCourses = new ArrayList<>();
     }
 
+    public void print() {
+        System.out.println("\n     Student details     ");
+        System.out.println("\n-------------------------");
+        System.out.println("\nStudent Id : " + studentId + "\nName : " + studentName + "\nEnrolled Courses : " + enrolledCourses);
+    }
+
+    public void addCourse(Course course) {
+        enrolledCourses.add(course);
+    }
+
     public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
