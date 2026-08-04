@@ -14,9 +14,16 @@ public class Student {
     }
 
     public void print() {
-        System.out.println("\n     Student details     ");
-        System.out.println("-------------------------");
-        System.out.println("Student Id : " + studentId + "\nName : " + studentName + "\n\n" + enrolledCourses + "\n");
+        if(enrolledCourses.isEmpty()) {
+            System.out.println("\n     Student details     ");
+            System.out.println("-------------------------");
+            System.out.println("Student Id : " + studentId + "\nName : " + studentName + "\n\n" + "No courses enrolled yet" + "\n");
+        }
+        else {
+            System.out.println("\n     Student details     ");
+            System.out.println("-------------------------");
+            System.out.println("Student Id : " + studentId + "\nName : " + studentName + "\n\n" + enrolledCourses + "\n");
+        }
     }
 
     public void addCourse(Course course) {

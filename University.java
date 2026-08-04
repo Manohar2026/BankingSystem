@@ -16,18 +16,33 @@ public class University {
         students.add(student);
     }
 
-    public void addStudentCourse(int id, int courseId) {
+    public int addStudentCourse(int studentId, int courseId) {
+        Student student = findStudent(studentId);
+        Course course = findCourse(courseId);
+        if(student == null) {
+            System.out.println("\nStudent not found");
+            return 0;
+        }
+        else if(course == null) {
+            System.out.println("\nCourse not found");
+            return 0;
+        }
+        else {
+            student.addCourse(course);
+            return 1;
+        }
+        
+    }
 
-        Course course = null;
+    public Student findStudent(int studentId) {
 
         for(Student student : students) {
 
-            if(student.getStudentId() == id) {
-                course = findCourse(courseId);
-                student.addCourse(course);
-                break;
+            if(student.getStudentId() == studentId) {
+                return student;
             }
         }
+        return null;
     }
 
     public Course findCourse(int courseId) {
@@ -55,8 +70,10 @@ public class University {
 
             if(student.getStudentId() == id) {
                 student.print();
+                break;
             }
         }
+        System.out.println("\nNo student with id : " + id);
     }
     
 }
