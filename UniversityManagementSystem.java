@@ -25,7 +25,7 @@ public class UniversityManagementSystem {
 
                     Student student = new Student(id, name);
 
-                    university.addStudent(student);
+                    university.addStudent(id, student);
                     System.out.println("\nStudent added successfully");
                     break;
 
@@ -38,7 +38,7 @@ public class UniversityManagementSystem {
                     name = sc.nextLine();
 
                     Course course = new Course(id, name);
-                    university.registerCourse(course);
+                    university.registerCourse(id, course);
 
                     System.out.println("\nCourse registered successfully");
                     break;
