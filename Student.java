@@ -15,8 +15,8 @@ public class Student {
 
     public void print() {
         System.out.println("\n     Student details     ");
-        System.out.println("\n-------------------------");
-        System.out.println("\nStudent Id : " + studentId + "\nName : " + studentName + "\nEnrolled Courses : " + enrolledCourses);
+        System.out.println("-------------------------");
+        System.out.println("Student Id : " + studentId + "\nName : " + studentName + "\n\n" + enrolledCourses + "\n");
     }
 
     public void addCourse(Course course) {

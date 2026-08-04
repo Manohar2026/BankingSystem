@@ -9,6 +9,11 @@ public class Course {
         this.courseName = courseName;
     }
 
+    @Override
+    public String toString() {
+        return "Course id : " + courseId + " Course Name : " + courseName; 
+    }
+
     public void setCourseId(int courseId) {
         this.courseId = courseId;
     }
