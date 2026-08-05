@@ -10,3 +10,5 @@ A basic banking system for practical understanding OOPS concepts in java.<br>
 * Fourth class to keep main free.<br>
 <br>
 *Also handled exceptions without exception interface.<br>
+<br>
+*Used map instead of arraylist, to optimize searching.

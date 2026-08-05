@@ -46,18 +46,7 @@ public class University {
 
             Student student = entry.getValue();
 
-            System.out.println("Name: " + student.getStudentName());
-
-            System.out.println();
-        }
-
-        for (Map.Entry<Integer, Course> entry : courses.entrySet()) {
-
-            System.out.println("Id: " + entry.getKey());
-
-            Course course = entry.getValue();
-
-            System.out.println("Name: " + course.getCourseName());
+            student.print();
 
             System.out.println();
         }
