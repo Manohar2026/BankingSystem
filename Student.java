@@ -2,14 +2,11 @@ package BankingSystem;
 
 import java.util.*;
 
-public class Student {
-    private int studentId;
-    private String studentName;
+public class Student extends Person {
     private List<Course> enrolledCourses;
 
     Student(int studentId, String studentName) {
-        this.studentId = studentId;
-        this.studentName = studentName;
+        super(studentId, studentName);
         enrolledCourses = new ArrayList<>();
     }
 
@@ -17,12 +14,12 @@ public class Student {
         if(enrolledCourses.isEmpty()) {
             System.out.println("\n     Student details     ");
             System.out.println("-------------------------");
-            System.out.println("Student Id : " + studentId + "\nName : " + studentName + "\n\n" + "No courses enrolled yet" + "\n");
+            System.out.println("Student Id : " + super.getId() + "\nName : " + super.getName() + "\n\n" + "No courses enrolled yet" + "\n");
         }
         else {
             System.out.println("\n     Student details     ");
             System.out.println("-------------------------");
-            System.out.println("Student Id : " + studentId + "\nName : " + studentName + "\n\n" + enrolledCourses + "\n");
+            System.out.println("Student Id : " + super.getId() + "\nName : " + super.getName() + "\n\n" + enrolledCourses + "\n");
         }
     }
 
@@ -31,19 +28,19 @@ public class Student {
     }
 
     public void setStudentId(int studentId) {
-        this.studentId = studentId;
+        super.setId(studentId);
     }
 
     public int getStudentId() {
-        return studentId;
+        return super.getId();
     }
 
     public void setStudentName(String studentName) {
-        this.studentName = studentName;
+        super.setName(studentName);
     }
 
     public String getStudentName() {
-        return studentName;
+        return super.getName();
     }
 
 }
